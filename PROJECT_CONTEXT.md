@@ -179,6 +179,9 @@ Full table: report §9.7 and `reference/analysis/results_14fb038_seed42.json`.
 ## 9. Reproducible commands (PowerShell, from repo root)
 
 ```powershell
+# clone (private repo; the pinned upstream gist is a submodule at 14fb038)
+git clone --recursive https://github.com/Yarish652/microgpt-fpga.git
+
 # environment (once)
 py -3.14 -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
