@@ -1,0 +1,120 @@
+{
+ "format": "float32 little-endian, row-major [out][in]",
+ "checkpoint_file": "microgpt_14fb038_seed42.json",
+ "checkpoint_file_sha256": "5b72c7ec7cf89bf44089e7f6b59abca3db788854843d21e09b4b4c842e0fdeda",
+ "state_dict_sha256_expected": "1761e472e0c66d17274ded4fbd62a6512df9a7f86f8d09a1202375cc0f422e8a",
+ "weights_file": "weights_fp32.bin",
+ "weights_file_sha256": "0ed67a9dbbb0c85b2fc6ab0f3d2ef664a4789457b175f6ae87f836be551cc9ed",
+ "weights_total_bytes": 16768,
+ "num_params": 4192,
+ "tensors": [
+  {
+   "name": "wte",
+   "shape": [
+    27,
+    16
+   ],
+   "dtype": "float32",
+   "offset_elems": 0,
+   "offset_bytes": 0,
+   "count": 432,
+   "sha256": "34c4eed2a64988baec6fc4c78d33459b9e784de5b477a2e758af1c6f3f20aa5b"
+  },
+  {
+   "name": "wpe",
+   "shape": [
+    16,
+    16
+   ],
+   "dtype": "float32",
+   "offset_elems": 432,
+   "offset_bytes": 1728,
+   "count": 256,
+   "sha256": "ca7da3c4fea5599eadb778f867157b15b088dd63f68d7be68b76800f4c3aec42"
+  },
+  {
+   "name": "layer0.attn_wq",
+   "shape": [
+    16,
+    16
+   ],
+   "dtype": "float32",
+   "offset_elems": 688,
+   "offset_bytes": 2752,
+   "count": 256,
+   "sha256": "6234d59a5e7ee418cde615375413e496e90be79b5abbe6021e73dc64bf262f49"
+  },
+  {
+   "name": "layer0.attn_wk",
+   "shape": [
+    16,
+    16
+   ],
+   "dtype": "float32",
+   "offset_elems": 944,
+   "offset_bytes": 3776,
+   "count": 256,
+   "sha256": "652a4b3524149306da82c806f2fe21afa3a249b238acc1c6365dce89ed6245c5"
+  },
+  {
+   "name": "layer0.attn_wv",
+   "shape": [
+    16,
+    16
+   ],
+   "dtype": "float32",
+   "offset_elems": 1200,
+   "offset_bytes": 4800,
+   "count": 256,
+   "sha256": "0322643e17bdf9857ac9f3bf795e03243745e6d7bed59b087978cd03c4708ef1"
+  },
+  {
+   "name": "layer0.attn_wo",
+   "shape": [
+    16,
+    16
+   ],
+   "dtype": "float32",
+   "offset_elems": 1456,
+   "offset_bytes": 5824,
+   "count": 256,
+   "sha256": "76eca4efaed0e60f98cce8adf3725f774bed0dddf584c2670f10373367e20987"
+  },
+  {
+   "name": "layer0.mlp_fc1",
+   "shape": [
+    64,
+    16
+   ],
+   "dtype": "float32",
+   "offset_elems": 1712,
+   "offset_bytes": 6848,
+   "count": 1024,
+   "sha256": "38da32dc0eca61f8e8e8494673bbc2c3db0d232f2ecd0ddd82977a6ecf35bd8b"
+  },
+  {
+   "name": "layer0.mlp_fc2",
+   "shape": [
+    16,
+    64
+   ],
+   "dtype": "float32",
+   "offset_elems": 2736,
+   "offset_bytes": 10944,
+   "count": 1024,
+   "sha256": "00b95796302490a6a8ecc29ae7fd85cfd885203c0a56bcb84ae94f87b8479f41"
+  },
+  {
+   "name": "lm_head",
+   "shape": [
+    27,
+    16
+   ],
+   "dtype": "float32",
+   "offset_elems": 3760,
+   "offset_bytes": 15040,
+   "count": 432,
+   "sha256": "448d16593ddcd4b0f3f15d618b1bc67146c959a26603c09acfcceffa4f134620"
+  }
+ ]
+}

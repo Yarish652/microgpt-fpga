@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Scratch training runs (reproducible, not canonical; see PROJECT_CONTEXT.md §10)
+reference/runs/
+
+# Vendor datasheets (AMD copyright; download from amd.com)
+docs/datasheets/
+
+# HLS / Vivado build outputs
+*.jou
+*.log
+*.str
+.Xil/
+hls/**/proj*/
+hls/**/_x/
+vivado/**/build/
+vivado/**/*.cache/
+vivado/**/*.runs/
+vivado/**/*.gen/
+vivado/**/*.srcs/
+vivado/**/*.hw/
+vivado/**/*.ip_user_files/

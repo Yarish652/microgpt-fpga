@@ -1,0 +1,235 @@
+{
+ "meta": {
+  "source_sha256": "d47d88c2fd432c8ebdc1048beab7f7eb64ea7e0e664e11b812d72a6d95ebccee",
+  "names_sha256": "0a30b5557f192f32ab962680889aac5f6fda0f4cecf40a6d0b5694f58ea8cc4d",
+  "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "train_seconds": 266.8,
+  "n_layer": 1,
+  "n_embd": 16,
+  "n_head": 4,
+  "block_size": 16,
+  "vocab_size": 27,
+  "BOS": 26,
+  "uchars": "abcdefghijklmnopqrstuvwxyz",
+  "num_steps": 1000,
+  "num_params": 4192
+ },
+ "crosscheck_max_abs_err_fp64_vs_upstream": 1.7763568394002505e-15,
+ "eval": {
+  "n_docs": 30869,
+  "n_tokens": 219838
+ },
+ "fp64": {
+  "token_mean_nll": 2.367207971855484,
+  "doc_mean_nll": 2.362079119022401,
+  "top1_acc": 0.2819667209490625
+ },
+ "fp32": {
+  "token_mean_nll": 2.367207971590852,
+  "doc_mean_nll": 2.362079119525225,
+  "top1_acc": 0.2819667209490625
+ },
+ "fp32_vs_fp64": {
+  "max_abs_logit_err": 3.5451196360725135e-06,
+  "top1_agreement": 1.0
+ },
+ "weights": {
+  "wte": {
+   "shape": [
+    27,
+    16
+   ],
+   "max_abs": 0.6903425361955573,
+   "std": 0.19946026009654624,
+   "max_row_l2": 1.0719925976150981
+  },
+  "wpe": {
+   "shape": [
+    16,
+    16
+   ],
+   "max_abs": 0.7256631661266256,
+   "std": 0.15741645202868923,
+   "max_row_l2": 0.8743727632822688
+  },
+  "lm_head": {
+   "shape": [
+    27,
+    16
+   ],
+   "max_abs": 1.3327011281817278,
+   "std": 0.24392876746914577,
+   "max_row_l2": 2.54646438732408
+  },
+  "layer0.attn_wq": {
+   "shape": [
+    16,
+    16
+   ],
+   "max_abs": 0.47871373397461464,
+   "std": 0.15717519022457505,
+   "max_row_l2": 0.8975378086784901
+  },
+  "layer0.attn_wk": {
+   "shape": [
+    16,
+    16
+   ],
+   "max_abs": 0.550768555605994,
+   "std": 0.16158182144190758,
+   "max_row_l2": 0.7911313694439592
+  },
+  "layer0.attn_wv": {
+   "shape": [
+    16,
+    16
+   ],
+   "max_abs": 0.33829968693236023,
+   "std": 0.12324963237674053,
+   "max_row_l2": 0.6538818312240257
+  },
+  "layer0.attn_wo": {
+   "shape": [
+    16,
+    16
+   ],
+   "max_abs": 0.327706115489012,
+   "std": 0.10939696948464482,
+   "max_row_l2": 0.6205329052392112
+  },
+  "layer0.mlp_fc1": {
+   "shape": [
+    64,
+    16
+   ],
+   "max_abs": 0.641608189148632,
+   "std": 0.15564311062824235,
+   "max_row_l2": 0.8635997704827258
+  },
+  "layer0.mlp_fc2": {
+   "shape": [
+    16,
+    64
+   ],
+   "max_abs": 0.45014911762224635,
+   "std": 0.1252189374031501,
+   "max_row_l2": 1.2833993267554535
+  }
+ },
+ "activations_max_abs": {
+  "emb_sum": 1.3912963944239454,
+  "rmsnorm0": 3.4439843789555686,
+  "rmsnorm1": 3.444072677429453,
+  "q": 2.833495176457546,
+  "k": 2.3768720255916835,
+  "v": 2.306536924909197,
+  "attn_scores": 6.889910164490087,
+  "attn_probs": 1.0,
+  "attn_out": 2.277549481547598,
+  "attn_proj": 1.0973314023091008,
+  "resid1": 3.4399948895842454,
+  "rmsnorm2": 3.3299352362597716,
+  "fc1": 2.754388616685445,
+  "relu": 2.4424371207544207,
+  "fc2": 4.867749572726034,
+  "resid2": 5.419987910476676,
+  "logits": 14.435009499605048
+ },
+ "attn_probs_min_nonzero": 1.1033056770632103e-06,
+ "static_bounds": {
+  "rmsnorm_out_elem": 4.0,
+  "q": 3.5901512347139604,
+  "k": 3.164525477775837,
+  "v": 2.6155273248961026,
+  "fc1": 3.4543990819309034
+ },
+ "double_rmsnorm_max_abs_diff": 0.00047074737271834977,
+ "weight_only_quant": {
+  "int16": {
+   "token_mean_nll": 2.367208946168595,
+   "doc_mean_nll": 2.3620796492840843,
+   "top1_acc": 0.2819667209490625,
+   "top1_agreement_vs_fp64": 1.0,
+   "max_abs_logit_err": 0.0006694584608180065
+  },
+  "int12": {
+   "token_mean_nll": 2.3672291900441627,
+   "doc_mean_nll": 2.362075068548751,
+   "top1_acc": 0.28200766018613704,
+   "top1_agreement_vs_fp64": 0.9996997789281198,
+   "max_abs_logit_err": 0.008823120267916096
+  },
+  "int8": {
+   "token_mean_nll": 2.366729559429937,
+   "doc_mean_nll": 2.361895729495464,
+   "top1_acc": 0.28176657356780904,
+   "top1_agreement_vs_fp64": 0.9905384874316542,
+   "max_abs_logit_err": 0.1523941886655038
+  },
+  "int6": {
+   "token_mean_nll": 2.3659541436922202,
+   "doc_mean_nll": 2.3632049927272534,
+   "top1_acc": 0.2819667209490625,
+   "top1_agreement_vs_fp64": 0.9440497093314167,
+   "max_abs_logit_err": 0.4841495055913576
+  },
+  "int4": {
+   "token_mean_nll": 2.4031510846602613,
+   "doc_mean_nll": 2.3991992815357572,
+   "top1_acc": 0.2617290914218652,
+   "top1_agreement_vs_fp64": 0.7731556873697905,
+   "max_abs_logit_err": 2.797027251332521
+  }
+ },
+ "fake_quant_activations": {
+  "W16A16_round": {
+   "token_mean_nll": 2.367211623277137,
+   "doc_mean_nll": 2.362079708489437,
+   "top1_acc": 0.28193033051610733,
+   "top1_agreement_vs_fp64": 0.999758913381672,
+   "n_disagree": 53,
+   "max_fp64_top2_margin_at_disagreement": 0.0008842460301059507,
+   "max_abs_logit_err": 0.0024830696806343866,
+   "mean_logit_err": 1.6853751615959605e-05
+  },
+  "W16A16_trunc": {
+   "token_mean_nll": 2.367187753249742,
+   "doc_mean_nll": 2.362073957423602,
+   "top1_acc": 0.2819257817119879,
+   "top1_agreement_vs_fp64": 0.9997225229487168,
+   "n_disagree": 61,
+   "max_fp64_top2_margin_at_disagreement": 0.001427879538317356,
+   "max_abs_logit_err": 0.0032922826072887545,
+   "mean_logit_err": -0.00046636800676512773
+  },
+  "W8A16_round": {
+   "token_mean_nll": 2.3667328258573943,
+   "doc_mean_nll": 2.361897474259808,
+   "top1_acc": 0.2817756711760478,
+   "top1_agreement_vs_fp64": 0.9907750252458629,
+   "n_disagree": 2028,
+   "max_fp64_top2_margin_at_disagreement": 0.0339234772268282,
+   "max_abs_logit_err": 0.15341958035629766,
+   "mean_logit_err": 0.001068321965804741
+  },
+  "W16A12_round": {
+   "token_mean_nll": 2.367303189281387,
+   "doc_mean_nll": 2.3621565377919493,
+   "top1_acc": 0.28218051474267414,
+   "top1_agreement_vs_fp64": 0.994636959943231,
+   "n_disagree": 1179,
+   "max_fp64_top2_margin_at_disagreement": 0.015478466450272288,
+   "max_abs_logit_err": 0.03237191107891846,
+   "mean_logit_err": 0.00017775108025282118
+  }
+ },
+ "greedy_from_BOS": "anan",
+ "greedy_prefixes": {
+  "a": "anan",
+  "b": "bina",
+  "ka": "karian",
+  "mar": "marian",
+  "zo": "zona"
+ }
+}

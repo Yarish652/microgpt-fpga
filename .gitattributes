@@ -1,0 +1,9 @@
+# Hashed / binary artifacts must stay byte-identical (SHA-256s recorded in PROJECT_CONTEXT.md)
+reference/data/** -text
+reference/checkpoints/** -text
+reference/analysis/*.json -text
+export/** -text
+*.bin binary
+*.f32 binary
+*.i32 binary
+*.pdf binary

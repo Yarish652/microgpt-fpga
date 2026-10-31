@@ -1,0 +1,256 @@
+{
+ "record_floats": 475,
+ "taps": {
+  "x0": {
+   "offset_floats": 0,
+   "size_floats": 16
+  },
+  "x1": {
+   "offset_floats": 16,
+   "size_floats": 16
+  },
+  "a_in": {
+   "offset_floats": 32,
+   "size_floats": 16
+  },
+  "q": {
+   "offset_floats": 48,
+   "size_floats": 16
+  },
+  "k": {
+   "offset_floats": 64,
+   "size_floats": 16
+  },
+  "v": {
+   "offset_floats": 80,
+   "size_floats": 16
+  },
+  "s": {
+   "offset_floats": 96,
+   "size_floats": 64
+  },
+  "p": {
+   "offset_floats": 160,
+   "size_floats": 64
+  },
+  "o": {
+   "offset_floats": 224,
+   "size_floats": 16
+  },
+  "attn_proj": {
+   "offset_floats": 240,
+   "size_floats": 16
+  },
+  "x2": {
+   "offset_floats": 256,
+   "size_floats": 16
+  },
+  "m_in": {
+   "offset_floats": 272,
+   "size_floats": 16
+  },
+  "hdn_pre": {
+   "offset_floats": 288,
+   "size_floats": 64
+  },
+  "hdn": {
+   "offset_floats": 352,
+   "size_floats": 64
+  },
+  "ffn_out": {
+   "offset_floats": 416,
+   "size_floats": 16
+  },
+  "x3": {
+   "offset_floats": 432,
+   "size_floats": 16
+  },
+  "logits": {
+   "offset_floats": 448,
+   "size_floats": 27
+  }
+ },
+ "dtype": "float32 little-endian",
+ "note": "s and p are [4 heads][16], zero beyond T=pos+1. One record per position, positions in order.",
+ "greedy_expected": {
+  "": "anan",
+  "a": "anan",
+  "b": "bina",
+  "ka": "karian",
+  "mar": "marian",
+  "zo": "zona"
+ },
+ "cases": {
+  "bos_only": {
+   "positions": 1,
+   "tokens": [
+    26
+   ],
+   "max_abs_fp32_vs_fp64_logits": 2.5046405793816007e-07
+  },
+  "len01_a": {
+   "positions": 2,
+   "tokens": [
+    26,
+    0
+   ],
+   "max_abs_fp32_vs_fp64_logits": 3.112629345380924e-07
+  },
+  "len02_tj": {
+   "positions": 3,
+   "tokens": [
+    26,
+    19,
+    9
+   ],
+   "max_abs_fp32_vs_fp64_logits": 6.59608397235445e-07
+  },
+  "len03_ele": {
+   "positions": 4,
+   "tokens": [
+    26,
+    4,
+    11,
+    4
+   ],
+   "max_abs_fp32_vs_fp64_logits": 4.3301671848183787e-07
+  },
+  "len06_denton": {
+   "positions": 7,
+   "tokens": [
+    26,
+    3,
+    4,
+    13,
+    19,
+    14,
+    13
+   ],
+   "max_abs_fp32_vs_fp64_logits": 6.832944894341608e-07
+  },
+  "len07_alyssah": {
+   "positions": 8,
+   "tokens": [
+    26,
+    0,
+    11,
+    24,
+    18,
+    18,
+    0,
+    7
+   ],
+   "max_abs_fp32_vs_fp64_logits": 8.44992841919634e-07
+  },
+  "len15_muhammadmustafa": {
+   "positions": 16,
+   "tokens": [
+    26,
+    12,
+    20,
+    7,
+    0,
+    12,
+    12,
+    0,
+    3,
+    12,
+    20,
+    18,
+    19,
+    0,
+    5,
+    0
+   ],
+   "max_abs_fp32_vs_fp64_logits": 7.588658714752228e-07
+  },
+  "prefix_a": {
+   "positions": 2,
+   "tokens": [
+    26,
+    0
+   ],
+   "max_abs_fp32_vs_fp64_logits": 3.112629345380924e-07
+  },
+  "prefix_b": {
+   "positions": 2,
+   "tokens": [
+    26,
+    1
+   ],
+   "max_abs_fp32_vs_fp64_logits": 6.169116701926214e-07
+  },
+  "prefix_ka": {
+   "positions": 3,
+   "tokens": [
+    26,
+    10,
+    0
+   ],
+   "max_abs_fp32_vs_fp64_logits": 3.8996094087195843e-07
+  },
+  "prefix_mar": {
+   "positions": 4,
+   "tokens": [
+    26,
+    12,
+    0,
+    17
+   ],
+   "max_abs_fp32_vs_fp64_logits": 3.9211359670332513e-07
+  },
+  "prefix_zo": {
+   "positions": 3,
+   "tokens": [
+    26,
+    25,
+    14
+   ],
+   "max_abs_fp32_vs_fp64_logits": 5.884610896345066e-07
+  },
+  "ramp_all_pos": {
+   "positions": 16,
+   "tokens": [
+    26,
+    0,
+    7,
+    14,
+    21,
+    2,
+    9,
+    16,
+    23,
+    4,
+    11,
+    18,
+    25,
+    6,
+    13,
+    20
+   ],
+   "max_abs_fp32_vs_fp64_logits": 8.955380508268718e-07
+  },
+  "bos_repeated": {
+   "positions": 16,
+   "tokens": [
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26
+   ],
+   "max_abs_fp32_vs_fp64_logits": 6.045345006810976e-07
+  }
+ }
+}
